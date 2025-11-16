@@ -1,0 +1,32 @@
+{
+  "description": "MCP Configuration - Customize which MCPs are enabled for this client",
+  "mcps": {
+    "hubspot": {
+      "enabled": true,
+      "description": "HubSpot CRM - 116 tools for companies, contacts, deals, leads",
+      "transport": "http",
+      "requiresAuth": true,
+      "envVars": ["HUBSPOT_ACCESS_TOKEN"]
+    },
+    "sharepoint": {
+      "enabled": false,
+      "description": "SharePoint document management",
+      "transport": "http",
+      "requiresAuth": true,
+      "envVars": ["SHAREPOINT_CLIENT_ID", "SHAREPOINT_CLIENT_SECRET"]
+    },
+    "asana": {
+      "enabled": false,
+      "description": "Asana project management",
+      "transport": "sse",
+      "requiresAuth": true,
+      "envVars": ["ASANA_ACCESS_TOKEN"]
+    }
+  },
+  "instructions": {
+    "1": "Set 'enabled: true' for MCPs you want to use",
+    "2": "Ensure corresponding package is in package.json optionalDependencies",
+    "3": "Provide required environment variables in .env file",
+    "4": "Run 'npm run install:all' to deploy"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "claude-client-deploy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Client-specific Claude Desktop + Code deployment with orchestrator and MCPs",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm install && node deploy/install.js",
+    "update": "npm update && node deploy/update.js",
+    "validate": "node deploy/validate.js",
+    "uninstall": "node deploy/uninstall.js"
+  },
+  "dependencies": {
+    "@magicturtle/claude-orchestrator": "^1.0.0"
+  },
+  "optionalDependencies": {
+    "@magicturtle/mcp-hubspot": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "comments": {
+    "dependencies": "Core orchestrator is always required",
+    "optionalDependencies": "Customize which MCPs to include per client. Remove unused MCPs to reduce installation size.",
+    "instructions": "1. Edit optionalDependencies to include only needed MCPs. 2. Update config/mcpConfig.json to match. 3. Run 'npm install:all' to deploy."
+  }
+}

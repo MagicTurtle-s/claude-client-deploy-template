@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "claude-code-orchestrator": {
+      "command": "node",
+      "args": ["{{ORCHESTRATOR_PATH}}/dist/index.js"],
+      "env": {
+        "HUBSPOT_PROJECT_PATH": "{{HUBSPOT_PROJECT_PATH}}",
+        "SHAREPOINT_PROJECT_PATH": "{{SHAREPOINT_PROJECT_PATH}}",
+        "ASANA_PROJECT_PATH": "{{ASANA_PROJECT_PATH}}",
+        "HUBSPOT_MCP_URL": "{{HUBSPOT_MCP_URL}}",
+        "SHAREPOINT_MCP_URL": "{{SHAREPOINT_MCP_URL}}",
+        "ASANA_MCP_URL": "{{ASANA_MCP_URL}}",
+        "DEBUG": "{{DEBUG}}"
+      }
+    }
+  },
+  "_comment": "This template is processed during installation. Placeholders ({{VAR}}) are replaced with actual values from .env and defaults."
+}
