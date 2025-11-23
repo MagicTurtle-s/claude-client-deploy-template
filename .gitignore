@@ -3,6 +3,9 @@
 .env.local
 .env.*.local
 
+# MCP config with secrets (users should not commit these)
+.mcp-config*.json
+
 # Dependencies
 node_modules/
 package-lock.json
