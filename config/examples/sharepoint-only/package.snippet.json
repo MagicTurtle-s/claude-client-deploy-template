@@ -1,0 +1,6 @@
+{
+  "_comment": "Add this to your package.json optionalDependencies",
+  "optionalDependencies": {
+    "@magicturtle/mcp-sharepoint": "^1.0.0"
+  }
+}

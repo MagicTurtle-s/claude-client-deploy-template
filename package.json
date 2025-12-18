@@ -13,9 +13,7 @@
   "dependencies": {
     "@magicturtle/claude-orchestrator": "^1.0.0"
   },
-  "optionalDependencies": {
-    "@magicturtle/mcp-hubspot": "^1.0.0"
-  },
+  "optionalDependencies": {},
   "engines": {
     "node": ">=18.0.0"
   },

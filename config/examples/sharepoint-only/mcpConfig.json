@@ -1,5 +1,5 @@
 {
-  "description": "MCP Configuration - Customize which MCPs are enabled for this client",
+  "description": "MCP Configuration - SharePoint Only",
   "mcps": {
     "hubspot": {
       "enabled": false,
@@ -9,7 +9,7 @@
       "envVars": ["HUBSPOT_ACCESS_TOKEN"]
     },
     "sharepoint": {
-      "enabled": false,
+      "enabled": true,
       "description": "SharePoint document management",
       "transport": "http",
       "requiresAuth": true,
@@ -22,11 +22,5 @@
       "requiresAuth": true,
       "envVars": ["ASANA_ACCESS_TOKEN"]
     }
-  },
-  "instructions": {
-    "1": "Set 'enabled: true' for MCPs you want to use",
-    "2": "Ensure corresponding package is in package.json optionalDependencies",
-    "3": "Provide required environment variables in .env file",
-    "4": "Run 'npm run install:all' to deploy"
   }
 }
